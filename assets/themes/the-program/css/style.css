@@ -609,7 +609,7 @@ pre {
 /* MAIN
 --------------------------------------------------------------------------------- */
 .unit-article header {
-  border-bottom: 5px solid rgba(21, 25, 25, 0.8);
+  /*border-bottom: 5px solid rgba(21, 25, 25, 0.8);*/
   margin-bottom: 21px;
 }
 .unit-article header h1 {
@@ -778,7 +778,7 @@ pre {
   border-bottom: 0;
 }
 .unit-article .unit-foot {
-  border-top: 5px solid rgba(21, 25, 25, 0.8);
+  /*border-top: 5px solid rgba(21, 25, 25, 0.8);*/
   padding-top: 1.625em;
   position: relative;
 }
@@ -869,6 +869,39 @@ pre {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
 }
+/* PAGINATION
+___________________*/
+div.jekyll-pagination {
+   font-size: 30px;
+}
+div .jekyll-pagination-next{
+     display:block;
+     float:left;
+     background-color:yellow;
+}
+div .jekyll-pagination-previous{
+     display:block;
+     float:right;
+     background-color:green;
+}
+
+span .jekyll-pagination-span{
+	display:block;
+}
+
+.jekyll-pagination a:link {
+  border-bottom: 0px dashed #d08688;
+  color:black;
+}
+.jekyll-pagination a:visited {
+  border-bottom: 0px dashed #d08688;
+  color:black;
+}
+.jekyll-pagination a:hover {
+  border-bottom: 0px dashed #d08688;
+  color:red;
+}
+
 /* FOOTER
 ----------------------------------------------- */
 .the-footer a:link {
