@@ -655,15 +655,34 @@ pre {
 .unit-article .entry-content:first-child h6 {
   margin-top: 0;
 }
+
 .unit-article a:link {
-  border-bottom: 1px dashed #c26164;
+  /*border-bottom: 1px dashed #c26164;*/
+  color:#ad4346;
 }
 .unit-article a:visited {
-  border-bottom: 1px dashed #ad4346;
+  /*border-bottom: 1px dashed #ad4346;*/
+  color:#ad4346;
 }
 .unit-article a:hover {
-  border-bottom: 1px dashed #d08688;
+  border-bottom: 1px dashed #ad4346;
+  color:#ad4346;
 }
+
+/*
+.unit-article a:link {
+  color: #c26164;
+  border: 0;
+}
+.unit-article a:visited {
+  color: #ad4346;
+  border: 0;
+}
+.unit-article a:hover {
+  color: #d08688;
+  border: 0;
+}
+*/
 .unit-article blockquote {
   border-left: 1em solid rgba(21, 25, 25, 0.8);
   padding-left: 1em;
