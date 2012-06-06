@@ -539,8 +539,8 @@ pre {
 }
 .the-header .unit-inner {
   width: 15em;
-  margin-top: 1.625em;
-  margin-bottom: 1.625em;
+  margin-top: 0em;
+  margin-bottom: 0em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -587,7 +587,7 @@ pre {
   float: left;
 }
 .ie .the-header .nav-global {
-  margin-top: 50px;
+  margin-top: 0px;
   text-align: right;
   width: 26.25em;
   float: right;
@@ -674,7 +674,7 @@ pre {
     letter-spacing: -1px;
   }
   .the-header .nav-global {
-    margin-top: 1.625em;
+    margin-top: 0em;
     letter-spacing: -0.31em;
     *letter-spacing: normal;
     word-spacing: -0.43em;
@@ -682,7 +682,7 @@ pre {
     padding-left: 0;
   }
   .the-header .nav-global .home:after {
-    margin-left: 16px;
+    margin-left: 0px;
     content: "/";
   }
   .the-header .nav-global li {
@@ -764,7 +764,7 @@ pre {
     float: left;
   }
   .the-header .nav-global {
-    margin-top: 21px;
+    margin-top: 0px;
     text-align: right;
     width: 26.25em;
     float: right;
