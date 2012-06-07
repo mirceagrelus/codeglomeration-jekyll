@@ -593,15 +593,14 @@ pre {
   font-family: UbuntuMono-B, consolas, monaco, monospace;
   margin: 0;
 }
+
+.the-header .logo a{
+ text-shadow: 1px 1px 2px #F6F6FE;
+}
 .the-header .logo a:visited {
   color: #2d2d2d;
 }
-.the-header .nav-global {
-  text-transform: uppercase;
-}
-.the-header .nav-global .logo {
-  text-transform: none;
-}
+
 .the-header .nav-global .forkme {
   position: relative;
   top: 2px;
@@ -658,15 +657,17 @@ pre {
 
 .unit-article a:link {
   /*border-bottom: 1px dashed #c26164;*/
-  color:#ad4346;
+  color:#f45653;
 }
 .unit-article a:visited {
   /*border-bottom: 1px dashed #ad4346;*/
+  background-color:#f45653;
   color:#ad4346;
 }
 .unit-article a:hover {
-  border-bottom: 1px dashed #ad4346;
-  color:#ad4346;
+  /*border-bottom: 1px dashed #ad4346;*/
+  background-color:#f45653;
+  color:white;
 }
 
 /*
@@ -777,7 +778,6 @@ pre {
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: white;
-  text-transform: uppercase;
   margin: 0 6px 0 0;
   display: inline-block;
   position: relative;
@@ -788,10 +788,6 @@ pre {
 }
 .unit-article .list-category {
   margin-bottom: 0;
-  text-transform: capitalize;
-}
-.unit-article .list-tag {
-  text-transform: capitalize;
 }
 .unit-article .comment a {
   border-bottom: 0;
@@ -890,36 +886,55 @@ pre {
 }
 /* PAGINATION
 ___________________*/
-div.jekyll-pagination {
-   font-size: 30px;
-}
-div .jekyll-pagination-next{
-     display:block;
-     float:left;
-     background-color:yellow;
-}
-div .jekyll-pagination-previous{
-     display:block;
-     float:right;
-     background-color:green;
+
+.pagination-outer{
+  font-size:30px;
+  width:100%;
+  overflow:hidden;
+  clear:both;
 }
 
-span .jekyll-pagination-span{
-	display:block;
+.pagination-inner{
+  display:block;
+  
 }
 
-.jekyll-pagination a:link {
-  border-bottom: 0px dashed #d08688;
-  color:black;
+.pagination-previous a{
+    float:right;
 }
-.jekyll-pagination a:visited {
-  border-bottom: 0px dashed #d08688;
-  color:black;
+
+.pagination-inner a{
+    display: inline-block;
+    padding: 4px 12px;
+    /*color: #000 !important;*/
+    border: 1px solid #A5B2C4 !important;
+    text-shadow: 1px 1px 2px #f6f6fe;	
+    text-decoration: none !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 0px  #fff;
+    -moz-box-shadow: 1px 1px 0px #fff;
+    box-shadow: 1px 1px 0px #fff;
+    /* For WebKit (Safari, Google Chrome etc) */
+    background: -webkit-gradient(linear, left top, left bottom, from(#F3F7FC), to(#C8D4E2));
+    /* For Mozilla/Gecko (Firefox etc) */
+    background: -moz-linear-gradient(top, #F3F7FC, #C8D4E2);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F3F7FC, endColorstr=#C8D4E2)";
+    background: #F3F7FC !IE7;
 }
-.jekyll-pagination a:hover {
-  border-bottom: 0px dashed #d08688;
+
+.pagination-inner a:link {
+  /*border-bottom: 0px dashed #d08688;*/
+  color:#f45653;
+}
+.pagination-inner a:visited {
+  color:#f45653;
+}
+.pagination-inner a:hover {
   color:red;
 }
+
 
 /* FOOTER
 ----------------------------------------------- */
@@ -949,7 +964,7 @@ span .jekyll-pagination-span{
   margin-bottom: 0;
 }
 .the-header .unit-head {
-  padding: 26px;
+  padding-left: 10px;
 }
 .the-header .unit-head .nav-global .logo {
   display: block;
@@ -959,18 +974,21 @@ span .jekyll-pagination-span{
   display: block;
   font-size: 30px;
   line-height: 52px;
-  padding-bottom: 26px;
 }
+.the-header .unit-head .nav-global li a:hover {
+    background-color: #f45653;
+    color: white;
+  }
 .body .unit-body {
   border-top: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 26px;
+  padding: 10px;
 }
 .the-footer {
   background-color: #1a1a1a;
   background-color: rgba(21, 25, 25, 0.8);
   color: #fafafa;
   color: rgba(250, 250, 250, 0.8);
-  padding: 26px;
+  padding: 10px;
 }
 .the-footer a:link {
   color: #c26164;
@@ -997,52 +1015,61 @@ span .jekyll-pagination-span{
   img {
     max-width: 100%;
   }
+.pagination-outer{
+  font-size:20px;
+}
 }
 /*
 	Tablet
 */
 @media only screen and (min-width: 768px) {
   .the-header .unit-head {
-    padding: 0;
+    padding-left: 26px;
   }
   .the-header .unit-head .nav-global li {
     float: left;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    border-width: 0 1px 0 0;
+    border-width: 0 0 0 1px;
   }
-  .the-header .unit-head .nav-global li a,
-  .the-header .unit-head .nav-global li div {
+  .the-header .unit-head .nav-global li a {
     display: block;
-    padding: 26px;
+    padding: 5px;
     height: 26px;
   }
   .the-header .unit-head .nav-global li a:hover {
-    background-color: #fff04a;
-    color: #474747;
+    background-color: #f45653;
+    color: white;
   }
-  .the-header .unit-head .nav-global li:nth-child(2) {
-    border-width: 0 1px;
-  }
-  .the-header .unit-head .nav-global li:last-child {
-    border-width: 0;
+  .the-header .unit-head .nav-global li:nth-child(1) {
+    border-width: 0px;
   }
   .the-header .unit-head .nav-global .logo {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     border-right: none 0;
     display: block;
     width: 100%;
+padding-top:10px;
+padding-bottom:10px;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 30px;
+    font-size: 40px;
     line-height: normal;
   }
   .the-header .unit-head .nav-global .logo a:hover {
-    background-color: transparent;
+    /*color: #f45653;*/
+  }
+.body .unit-body {
+    border-top: 0 none;
+    padding: 26px;
+  }
+  .the-footer {
+    padding:26px;
   }
 }
 /*
 	Not that old computer layout 
 */
+/*
 @media only screen and (min-width: 1280px) {
   .the-header .unit-head .nav-global .logo {
     border-bottom: 0 none;
@@ -1075,9 +1102,11 @@ span .jekyll-pagination-span{
     width: 420px;
   }
 }
+*/
 /*
 	Huge-screen layout 
 */
+/*
 @media only screen and (min-width: 1410px) {
   .the-header {
     float: left;
@@ -1146,6 +1175,7 @@ span .jekyll-pagination-span{
     margin-bottom: 26px;
   }
 }
+*/
 pre .c {
   color: #999999;
   font-style: italic;
