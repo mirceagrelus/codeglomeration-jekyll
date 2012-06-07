@@ -758,37 +758,12 @@ pre {
 }
 .unit-article .date-publish {
   margin-bottom: 0;
+  color:#c0c2ba;
 }
 .unit-article .list-linear .list-head {
   margin-right: 4px;
 }
-.unit-article .list-category a,
-.unit-article .list-tag a {
-  border: 0 none;
-}
-.unit-article .list-category a:hover span,
-.unit-article .list-tag a:hover span {
-  background-color: #f99157;
-}
-.unit-article .list-category span,
-.unit-article .list-tag span {
-  background-color: #e25608;
-  padding: 1px 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  color: white;
-  margin: 0 6px 0 0;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  top: -2px;
-  font-weight: bold;
-  font-size: 13px;
-}
-.unit-article .list-category {
-  margin-bottom: 0;
-}
+
 .unit-article .comment a {
   border-bottom: 0;
 }

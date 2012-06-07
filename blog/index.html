@@ -19,28 +19,10 @@ tagline:
   
   {% if paginator.previous_page %}
     {% if paginator.previous_page ==1 %}
-      <span class="pagination-previous"> <a href="/" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
+      <span class="pagination-previous"> <a href="/blog" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
     {% else %}
       <span class="pagination-previous"> <a href="/page{{paginator.previous_page}}" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
     {% endif %}
   {% endif %}
   
 </div>
-
-<!--<div class="pagination-outer">
-    <div class="pager-inner">
-        
-        <span class="pager-right">
-            <a href="http://www.avc.com/a_vc/page/3/"><span class="pager-label">Older Posts</span><span class="chevron"></span></a>
-        </span>
-        
-        
-        <span class="separator">|</span>
-        
-        <span class="pager-left">
-            <a href="http://www.avc.com/a_vc/"><span class="chevron"></span><span class="pager-label">Newer Posts</span></a>
-        </span>
-        
-        
-    </div>
-</div> -->
