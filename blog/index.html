@@ -13,7 +13,7 @@ tagline:
 <div class="pagination-outer">
     <div class="pagination-inner">
 {% if paginator.next_page %}
-    <span class="pagination-next"> <a href="/page{{paginator.next_page}}" class="pagination-a"><span class="pagination-label">Older posts</span></a> </span>
+    <span class="pagination-next"> <a href="/blog/page{{paginator.next_page}}" class="pagination-a"><span class="pagination-label">Older posts</span></a> </span>
   {% else %}
   {% endif %}
   
@@ -21,7 +21,7 @@ tagline:
     {% if paginator.previous_page ==1 %}
       <span class="pagination-previous"> <a href="/blog" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
     {% else %}
-      <span class="pagination-previous"> <a href="/page{{paginator.previous_page}}" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
+      <span class="pagination-previous"> <a href="/blog/page{{paginator.previous_page}}" class="pagination-a"><span class="pagination-label">Newer posts</span></a> </span>
     {% endif %}
   {% endif %}
   
