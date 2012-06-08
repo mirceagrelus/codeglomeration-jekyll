@@ -304,5 +304,24 @@ def get_stdin(message)
   STDIN.gets.chomp
 end
 
+#codeglomeration specific
+
+desc "deploy _site folder to codeglomeration.github.com repository"
+task :deploy do
+  puts "Make sure you run jekyll --server because this deploy doesn't GENERATE files. only copies."
+  cp_r "_site/.", "../codeglomeration.github.com"
+  cd "../codeglomeration.github.com" do
+    #file_list = FileList['.//**/*'].find_all {|f| File.file? f}
+    #FileUtiles.rm file_list
+    system "git add ."
+    system "git add -u"
+    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m \"#{message}\""
+    system "git push origin master "
+    puts "\n## Github Pages deploy complete"
+  end
+end
+
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }
